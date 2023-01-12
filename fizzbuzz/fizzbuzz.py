@@ -6,8 +6,23 @@ For numbers which are multiples of both 3 and 5 print FizzBuzz instead of the nu
 """
 
 
+def get_line_number_repr(line_number: int) -> str:
+    line_repr = ""
+
+    if line_number % 3 == 0:
+        line_repr += "Fizz"
+    if line_number % 5 == 0:
+        line_repr += "Buzz"
+
+    if line_repr:
+        return line_repr
+
+    return str(line_number)
+
+
 def fizzbuzz(n: int):
-    print(n)
+    for line_number in range(1, n + 1):
+        print(get_line_number_repr(line_number))
 
 
 if __name__ == "__main__":
