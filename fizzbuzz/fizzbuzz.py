@@ -7,6 +7,10 @@ For numbers which are multiples of both 3 and 5 print FizzBuzz instead of the nu
 
 
 def get_line_number_repr(line_number: int) -> str:
+
+    if line_number % 3 == 0:
+        return "Fizz"
+
     return str(line_number)
 
 
