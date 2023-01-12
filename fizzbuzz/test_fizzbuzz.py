@@ -1,2 +1,7 @@
-def test_true():
-    assert 1 == 1
+from fizzbuzz import fizzbuzz
+
+
+def test_fizzbuzz(capsys):
+    fizzbuzz.fizzbuzz(2)
+    captured = capsys.readouterr()
+    assert captured.out == "1\n2\n"
