@@ -21,6 +21,28 @@ def test_get_line_number_repr(line_number, expected):
 
 
 def test_fizzbuzz(capsys):
-    fizzbuzz.fizzbuzz(2)
+    fizzbuzz.fizzbuzz(15)
     captured = capsys.readouterr()
-    assert captured.out == "1\n2\n"
+    assert (
+        captured.out
+        == "\n".join(
+            [
+                "1",
+                "2",
+                "Fizz",
+                "4",
+                "Buzz",
+                "Fizz",
+                "7",
+                "8",
+                "Fizz",
+                "Buzz",
+                "11",
+                "Fizz",
+                "13",
+                "14",
+                "FizzBuzz",
+            ]
+        )
+        + "\n"
+    )
