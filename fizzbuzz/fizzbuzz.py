@@ -10,6 +10,8 @@ def get_line_number_repr(line_number: int) -> str:
 
     if line_number % 3 == 0:
         return "Fizz"
+    if line_number % 5 == 0:
+        return "Buzz"
 
     return str(line_number)
 
