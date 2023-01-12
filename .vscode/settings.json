@@ -8,6 +8,6 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "testing.automaticallyOpenPeekView": "failureAnywhere",
-    "testing.automaticallyOpenPeekViewDuringAutoRun": true
+    "testing.automaticallyOpenPeekView": "never",
+    "testing.automaticallyOpenPeekViewDuringAutoRun": false
 }
