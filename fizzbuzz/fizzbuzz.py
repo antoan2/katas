@@ -7,7 +7,8 @@ For numbers which are multiples of both 3 and 5 print FizzBuzz instead of the nu
 
 
 def fizzbuzz(n: int):
-    print(n)
+    for line_number in range(1, n + 1):
+        print(line_number)
 
 
 if __name__ == "__main__":
