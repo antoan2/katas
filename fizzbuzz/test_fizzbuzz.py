@@ -4,7 +4,8 @@ from fizzbuzz import fizzbuzz
 
 
 @pytest.mark.parametrize(
-    "line_number, expected", [(1, "1"), (719, "719"), (3, "Fizz"), (333, "Fizz")]
+    "line_number, expected",
+    [(1, "1"), (719, "719"), (3, "Fizz"), (333, "Fizz"), (5, "Buzz"), (515, "Buzz")],
 )
 def test_get_line_number_repr(line_number, expected):
     assert fizzbuzz.get_line_number_repr(line_number) == expected
