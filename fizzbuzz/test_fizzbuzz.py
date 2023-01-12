@@ -3,7 +3,9 @@ import pytest
 from fizzbuzz import fizzbuzz
 
 
-@pytest.mark.parametrize("line_number, expected", [(1, "1"), (719, "719")])
+@pytest.mark.parametrize(
+    "line_number, expected", [(1, "1"), (719, "719"), (3, "Fizz"), (333, "Fizz")]
+)
 def test_get_line_number_repr(line_number, expected):
     assert fizzbuzz.get_line_number_repr(line_number) == expected
 
