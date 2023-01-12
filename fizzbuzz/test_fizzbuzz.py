@@ -1,8 +1,11 @@
+import pytest
+
 from fizzbuzz import fizzbuzz
 
 
-def test_get_line_number_repr():
-    assert fizzbuzz.get_line_number_repr(1) == "1"
+@pytest.mark.parametrize("line_number, expected", [(1, "1"), (719, "719")])
+def test_get_line_number_repr(line_number, expected):
+    assert fizzbuzz.get_line_number_repr(line_number) == expected
 
 
 def test_fizzbuzz(capsys):
